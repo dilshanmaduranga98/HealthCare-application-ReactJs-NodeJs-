@@ -1,0 +1,40 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+div .side-nav-bar {
+  height: 100svh;
+  background-color: #4c67c8;
+  max-width: 300px;
+}
+div .side-nav-bar div {
+  padding: 30px 0 30px 30px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+div .side-nav-bar div h1 {
+  font-family: "Poppins", sans-serif;
+  color: #2c2c2c;
+}
+div .side-nav-bar div h1 span {
+  color: #ffffff;
+}
+@media screen and (max-width: 480px) {
+  div .side-nav-bar {
+    display: none;
+  }
+}
+@media screen and (max-width: 1280px) {
+  div img {
+    display: none;
+  }
+}
+@media screen and (max-width: 480px) {
+  div img {
+    display: flex;
+    padding: 10px 20px;
+  }
+}/*# sourceMappingURL=sideNav.css.map */

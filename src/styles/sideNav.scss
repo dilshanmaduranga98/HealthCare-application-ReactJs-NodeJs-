@@ -1,0 +1,54 @@
+$pure-white: #ffffff;
+$light-blue: #4c67c8;
+$light-black: #2c2c2c;
+
+$mobile-max: 480px;
+$desktop-max: 1280px;
+
+@mixin flex($x: center, $y: center, $way: row) {
+  display: flex;
+  align-items: $x;
+  justify-content: $y;
+  flex-direction: $way;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+div {
+  .side-nav-bar {
+    height: 100svh;
+    background-color: $light-blue;
+    max-width: 300px;
+
+    div {
+      padding: 30px 0 30px 30px;
+      @include flex($x: flex-start, $y: center, $way: column);
+      h1 {
+        font-family: "Poppins", sans-serif;
+        color: $light-black;
+
+        span {
+          color: $pure-white;
+        }
+      }
+    }
+
+    @media screen and (max-width: $mobile-max) {
+      display: none;
+    }
+  }
+
+  img {
+    @media screen and (max-width: $desktop-max) {
+      display: none;
+    }
+
+    @media screen and (max-width: $mobile-max) {
+      display: flex;
+      padding: 10px 20px;
+    }
+  }
+}
